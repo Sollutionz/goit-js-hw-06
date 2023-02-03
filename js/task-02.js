@@ -8,11 +8,20 @@ const ingredients = [
 ];
 
 const ul = document.querySelector("#ingredients")
-const div = document.createElement('div')
+// const div = ingredients.map(ingredient => {
+//   const elem = document.createElement('li')
+//   elem.textContent = ingredient
+//   elem.classList.add('item')
+//   return elem
+// })
+
+// Оба варианта оказались рабоичими)))
+
+const div = []
 for (const elem of ingredients) {
   const liElem = document.createElement("li")
   liElem.textContent = elem 
   liElem.classList.add('item')
-  div.appendChild(liElem)
+  div.push(liElem)
 } 
-ul.appendChild(div)
+ul.append(...div)
