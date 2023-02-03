@@ -10,14 +10,16 @@ const boxes = document.getElementById('boxes')
 
 function createBoxes() {
   let size = 30
+  const div = document.createElement('div')
   for (let i = 1; i <= input.value; i += 1){
     size += 10
     let a = document.createElement("div")
     a.style.backgroundColor = getRandomHexColor()
     a.style.width = `${size}px`
     a.style.height = `${size}px`
-    boxes.appendChild(a)
+    div.appendChild(a)
   }
+   boxes.appendChild(div)
 }
 
 

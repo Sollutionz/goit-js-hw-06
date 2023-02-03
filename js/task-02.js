@@ -8,9 +8,11 @@ const ingredients = [
 ];
 
 const ul = document.querySelector("#ingredients")
+const div = document.createElement('div')
 for (const elem of ingredients) {
   const liElem = document.createElement("li")
   liElem.textContent = elem 
   liElem.classList.add('item')
-  ul.appendChild(liElem)
+  div.appendChild(liElem)
 } 
+ul.appendChild(div)
